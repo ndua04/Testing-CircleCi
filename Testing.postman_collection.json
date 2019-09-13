@@ -7,6 +7,21 @@
 	"item": [
 		{
 			"name": "Testing List Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44e1c023-b3f1-4b74-81bb-b918338f9267",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -15,7 +30,22 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
 				}
 			},
 			"response": []
