@@ -8,3 +8,5 @@ jobs:
             - checkout
             - newman/newman-run:
                 collection: ./Testing.postman_collection.json
+
+
